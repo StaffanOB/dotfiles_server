@@ -5,5 +5,5 @@ echo
 PKG_CONFIG=$HOME/.bachrc
 PKG_ALIAS=$HOME/.bash_alias
 
-echo "cp $PWD/bash/bashrc $PKG_CONFIG"
-echo "cp $PWD/bash/bash_alias $PKG_ALIAS"
+echo "cp -f $PWD/bash/bashrc $PKG_CONFIG"
+echo "cp -f $PWD/bash/bash_alias $PKG_ALIAS"

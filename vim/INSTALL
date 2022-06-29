@@ -12,8 +12,8 @@ PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG|grep "install ok
 echo Checking for $REQUIRED_PKG is installed.
 if [ "" = "$PKG_OK" ]; then
   echo "No $REQUIRED_PKG. Setting up $REQUIRED_PKG."
-  #sudo apt-get --yes install $REQUIRED_PKG 
+  sudo apt-get --yes install $REQUIRED_PKG 
 fi
 
-echo "cp $PWD/vim/vimrc $PKG_CONFIG"
-echo "cp $PWD/vim $PKG_DIR"
+echo "cp $PWD/vim/vimrc -f $PKG_CONFIG"
+echo "cp $PWD/vim -fr $PKG_DIR"
