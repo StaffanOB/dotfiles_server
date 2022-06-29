@@ -15,5 +15,5 @@ if [ "" = "$PKG_OK" ]; then
   sudo apt-get --yes install $REQUIRED_PKG 
 fi
 
-echo "cp $PWD/vim/vimrc -f $PKG_CONFIG"
-echo "cp $PWD/vim -fr $PKG_DIR"
+cp $PWD/vim/vimrc -f $PKG_CONFIG
+cp $PWD/vim -fr $PKG_DIR
