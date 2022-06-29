@@ -1,0 +1,19 @@
+echo "================================================================================"
+echo "Installing and configuaring VIM"
+echo
+
+REQUIRED_PKG="vim-nox"
+PKG_CONFIG=$HOME/.vimrc
+PKG_DIR=$HOME/.vim
+
+
+PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG|grep "install ok installed")
+
+echo Checking for $REQUIRED_PKG is installed.
+if [ "" = "$PKG_OK" ]; then
+  echo "No $REQUIRED_PKG. Setting up $REQUIRED_PKG."
+  #sudo apt-get --yes install $REQUIRED_PKG 
+fi
+
+echo "cp $PWD/vim/vimrc $PKG_CONFIG"
+echo "cp $PWD/vim $PKG_DIR"
